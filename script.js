@@ -1,5 +1,5 @@
 const correctPassword = "12072025";
-const correctUser = "TU_USUARIO_AQUI"; // Cambia esto por el usuario que quieras
+const correctUser = "vocalista"; // Cambia esto por el usuario que quieras
 
 const messages = [
   "Eres mi canción favorita, vocalista 🎶",
