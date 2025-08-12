@@ -1,19 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página Web</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para mi Vocalista</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1>Bienvenido a mi página</h1>
-    </header>
-    <main>
-        <p>Este es un ejemplo básico de una página web.</p>
-        <button id="clickBtn">Haz clic</button>
-    </main>
-    <script src="script.js"></script>
+  <div class="login-container" id="login-container">
+    <h1>💖 Ingresa 💖</h1>
+    <input type="text" id="username" placeholder="Usuario" />
+    <input type="password" id="password" placeholder="Contraseña" />
+    <button onclick="login()">Entrar</button>
+    <p id="error-message"></p>
+  </div>
+
+  <div class="main-container hidden" id="main-container">
+    <h1>Para ti, mi vocalista 💕</h1>
+    <div class="image-container">
+      <img src="foto.jpg" alt="Foto" id="photo" />
+    </div>
+    <div id="message"></div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
