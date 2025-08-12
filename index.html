@@ -4,23 +4,101 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Para mi Vocalista</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Floating Hearts Animation -->
+  <div class="floating-hearts">
+    <div class="heart">💖</div>
+    <div class="heart">💕</div>
+    <div class="heart">💗</div>
+    <div class="heart">💝</div>
+    <div class="heart">💖</div>
+  </div>
+
   <div class="login-container" id="login-container">
-    <h1>💖 Ingresa 💖</h1>
-    <input type="text" id="username" placeholder="Usuario" />
-    <input type="password" id="password" placeholder="Contraseña" />
-    <button onclick="login()">Entrar</button>
-    <p id="error-message"></p>
+    <div class="login-card">
+      <h1>💖 Ingresa a Nuestro Mundo 💖</h1>
+      <p class="login-subtitle">Un lugar especial para nosotros</p>
+      <div class="input-group">
+        <input type="text" id="username" placeholder="Usuario" />
+        <input type="password" id="password" placeholder="Contraseña" />
+      </div>
+      <button onclick="login()" class="login-btn">Entrar al Amor</button>
+      <p id="error-message"></p>
+    </div>
   </div>
 
   <div class="main-container hidden" id="main-container">
-    <h1>Para ti, mi vocalista 💕</h1>
-    <div class="image-container">
-      <img src="foto.jpg" alt="Foto" id="photo" />
-    </div>
-    <div id="message"></div>
+    <header class="romantic-header">
+      <h1>Para ti, mi vocalista 💕</h1>
+      <p class="subtitle">Celebrando nuestro primer mes juntos</p>
+    </header>
+
+    <!-- Timeline Section -->
+    <section class="timeline-section">
+      <h2>Nuestra Historia de Amor</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Primer Encuentro</h3>
+            <p>Cuando nuestros corazones se conectaron por primera vez</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Primera Canción</h3>
+            <p>Tu voz se convirtió en mi melodía favorita</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Un Mes de Amor</h3>
+            <p>Hoy celebramos este hermoso comienzo</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Photo Section -->
+    <section class="photo-section">
+      <div class="image-container">
+        <img src="/placeholder.svg?height=400&width=400" alt="Nuestra Foto" id="photo" />
+        <div class="photo-overlay">
+          <p>Haz clic para ver mensajes especiales 💕</p>
+        </div>
+      </div>
+      <div id="message" class="romantic-message"></div>
+    </section>
+
+    <!-- Love Letter Section -->
+    <section class="love-letter">
+      <div class="letter-content">
+        <h2>Mi Carta de Amor</h2>
+        <p>Mi querida vocalista,</p>
+        <p>Este primer mes contigo ha sido como una canción perfecta. Cada día descubro una nueva nota en tu sonrisa, una nueva melodía en tu risa. Eres mi inspiración, mi musa, mi corazón.</p>
+        <p>Gracias por llenar mi mundo de música y amor.</p>
+        <p class="signature">Con todo mi amor,<br>Tu admirador eterno 💖</p>
+      </div>
+    </section>
+
+    <!-- Surprise Section -->
+    <section class="surprise-section">
+      <button onclick="showSurprise()" class="surprise-btn" id="surprise-btn">
+        ✨ Una Sorpresa Especial ✨
+      </button>
+      <div id="surprise-content" class="surprise-content hidden">
+        <h3>🎵 Nuestra Canción del Corazón 🎵</h3>
+        <p>Cada vez que escucho música, pienso en ti. Eres la melodía que nunca quiero que termine.</p>
+        <div class="music-notes">♪ ♫ ♪ ♫ ♪</div>
+      </div>
+    </section>
   </div>
 
   <script src="script.js"></script>
